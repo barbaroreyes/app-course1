@@ -2,24 +2,24 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View ,Button,Image ,SafeAreaView ,ScrollView,Platform} from 'react-native';
 import {pictures} from './data';
 
-const  Card  = ({name, decription, image, size}) =>{
+const  Card  = ({name, description, image, size}) =>{
  return (
     <View style = {{
-      backgroundColor: 'grey',
+      backgroundColor: 'black',
       padding:15,
       borderRadius: 40,
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
       margin:5,
-      
-      
       }}>
-      <Text>{name}</Text>
+     
       <Image 
       style ={{width:360,height:420,borderRadius: 40,}}
       source={{uri:image}}
       />
+       <Text style ={{fontSize:28,fontWeight: 'bold',color: 'white'}}>{name}</Text>
+       <Text style ={{fontSize:28,fontWeight: 'bold',color: 'white'}}>{description}</Text>
     </View>
   )
 }
@@ -50,7 +50,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container:{
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
     
